@@ -36,6 +36,7 @@ plugins:
 
 kramdown:
   math_engine: null
+  smart_quotes: ["apos", "apos", "quot", "quot"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.

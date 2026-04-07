@@ -6,3 +6,114 @@
 blockquote {
   font-style: normal;
 }
+
+// Archive / Section styles
+.home-archive {
+  .site-heading {
+    margin-bottom: 0.2em;
+  }
+  .site-subheading {
+    color: #828282;
+    margin-bottom: 2em;
+  }
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #e8e8e8;
+  margin: 1.5em 0 2em;
+}
+
+.archive-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
+
+.archive-section {
+  h2 {
+    margin-bottom: 0.2em;
+    a {
+      color: #2a7ae2;
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+  }
+  .section-desc {
+    color: #828282;
+    font-size: 0.9em;
+    margin-bottom: 0.8em;
+  }
+}
+
+// Section page
+.section-page {
+  .section-title {
+    margin-bottom: 0.2em;
+  }
+  .section-description {
+    color: #828282;
+    margin-bottom: 1.5em;
+  }
+}
+
+// Shared post list
+.post-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  .post-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #f0f0f0;
+
+    .post-date {
+      font-size: 0.85em;
+      color: #828282;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .post-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2em;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+      &:hover { color: #2a7ae2; }
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.4em;
+      flex-wrap: wrap;
+
+      .tag {
+        font-size: 0.75em;
+        background: #f0f4f8;
+        color: #555;
+        padding: 0.1em 0.5em;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.no-posts {
+  color: #828282;
+}
+
+.see-all {
+  display: inline-block;
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #2a7ae2;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}

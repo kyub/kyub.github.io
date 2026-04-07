@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="section-page">
+  <h1 class="section-title">{{ page.title }}</h1>
+  {% if page.description %}
+    <p class="section-description">{{ page.description }}</p>
+  {% endif %}
+
+  <hr class="section-divider">
+
+  {% assign section_posts = site.posts | where: "section", page.section_key %}
+
+  {% if section_posts.size == 0 %}
+    <p class="no-posts">아직 포스트가 없습니다.</p>
+  {% else %}
+    <ul class="post-list">
+      {% for post in section_posts %}
+        <li class="post-item">
+          <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+          <div class="post-info">
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            {% if post.categories.size > 0 %}
+              <div class="post-tags">
+                {% for cat in post.categories %}
+                  <span class="tag">{{ cat }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

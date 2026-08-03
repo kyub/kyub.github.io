@@ -22,7 +22,7 @@ Notes and reviews of papers I've read, grouped by topic.
 {% assign sub_categories = sub_categories | sort %}
 
 {% for sub in sub_categories %}
-{% assign posts_of_sub = site.categories[sub] %}
+{% assign posts_of_sub = review_posts | where_exp: "p", "p.categories[1] == sub" %}
 <h2 class="ps-lg-2" style="margin: 2.75rem 0 0;">
   <i class="far fa-folder-open fa-fw text-muted"></i>
   {{ sub }}
